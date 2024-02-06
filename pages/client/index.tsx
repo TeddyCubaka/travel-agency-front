@@ -82,16 +82,18 @@ const Recent_client = (props: Op_client) => {
 const Clients = (props: Op_client) => {
   const router = useRouter();
   return (
-    <div
+    <Link href={"client/" + props.stt_tag}
       className="bg-white w-full p-5 border-[0.5px] border-black h-fit flex flex-col rounded-xl cursor-pointer"
-      onClick={() => router.push("client/" + props.stt_tag)}
+      onClick={() => {
+        router.push("/client/" + props.stt_tag)
+      }}
     >
       <div className="text-lg font-[400]">{props.first_name} {props.second_name}</div>
       <span>identifiant : {props.stt_tag} </span>
       <span>address : {props.address} </span>
       <span>téléphone : {props.phone_number} </span>
       <span>adresse mail : {props.mail} </span>
-    </div>
+    </Link>
   );
 };
 
@@ -125,7 +127,7 @@ const Client_filter = () => {
         {client_filtered.length == 0 ?
           <div className="h-full w-full flex items-center justify-center">Aucune donnée à afficher </div>
           : client_filtered.map((client) => (
-            <Clients {...client} />
+            <Clients {...client} key={client.stt_tag + client.first_name} />
           ))
         }
       </div>

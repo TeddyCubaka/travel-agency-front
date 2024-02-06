@@ -3,18 +3,20 @@ export interface Op_product {
   stt_tag: string;
   label: string;
   partner_ID: number;
-  stock_quantity: string;
-  is_available: string;
+  stock_quantity: number;
+  is_available: boolean;
   category_ID: number;
   created_at?: string;
   updated_at?: string;
   Id_user_create_at?: number;
+  unit_price: number;
+  currency: string;
 }
 
 export interface Op_command {
   ID: number;
   stt_tag: string;
-  client_ID?: string;
+  client_ID?: number;
   agent_created_at_ID?: number;
   agent_closed_at_ID?: number;
   status?: string;
@@ -30,14 +32,14 @@ export interface Rf_category {
   stt_tag: string;
   label: string;
   partner_ID: number;
-  is_available: string;
+  is_available: number;
   created_at: string;
   updated_at: string;
   Id_user_create_at: number;
 }
 
 export interface Rf_partner {
-  ID: string;
+  ID: number;
   stt_tag: string;
   sociaty_name: string;
   rf_contact_name: string;
@@ -88,7 +90,7 @@ export interface Op_bill {
 }
 
 export interface Op_agent {
-  ID: number;
+  agent_ID: number;
   stt_tag: string;
   first_name: string;
   second_name: string;

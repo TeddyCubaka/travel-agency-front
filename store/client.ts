@@ -15,7 +15,7 @@ const op_client_store = create<Op_client>()((set) => ({
   mail: "",
   created_at: "",
   updated_at: "",
-  Id_user_create_at: "",
+  Id_user_create_at: 1,
 
   set_first_name: (value) => set((store) => ({ first_name: value })),
   set_second_name: (value) => set((store) => ({ second_name: value })),
@@ -54,7 +54,7 @@ const op_client_store = create<Op_client>()((set) => ({
 export const client_db: Op_client[] = [
   {
     ID: 1,
-    stt_tag: "",
+    stt_tag: "a58c2107-3c02-4c3d-8251-06508b1fd59494J",
     first_name: "John",
     second_name: "Doe",
     address: "123 Main Street",
@@ -65,11 +65,11 @@ export const client_db: Op_client[] = [
     mail: "john.doe@example.com",
     created_at: "2021-01-01",
     updated_at: "2021-01-02",
-    Id_user_create_at: "abc123",
+    Id_user_create_at: 0,
   },
   {
     ID: 2,
-    stt_tag: "",
+    stt_tag: "a58c2107-3c02-4c3d-8251-06508b1fd0940494",
     first_name: "Jane",
     second_name: "Smith",
     address: "456 Elm Street",
@@ -80,26 +80,26 @@ export const client_db: Op_client[] = [
     mail: "jane.smith@example.com",
     created_at: "2021-02-01",
     updated_at: "2021-02-02",
-    Id_user_create_at: "def456",
+    Id_user_create_at: 0
   },
   {
-    "ID": 21,
-    "stt_tag": "0ebf58e9-e8ab-4556-bb8c-443153a77d03",
-    "first_name": "ken",
-    "second_name": "Hentakyu",
-    "address": "23 Stritr",
-    "city": "joijfoiejoi",
-    "country": "jijfeoijeoi",
-    "sexe": "joijfaoiejoi",
-    "phone_number": "joijfeoiajoi",
-    "mail": "joi",
-    "created_at": "17/12/2023",
-    "updated_at": "17/12/2023",
-    "Id_user_create_at": ""
+    ID: 21,
+    stt_tag: "0ebf58e9-e8ab-4556-bb8c-443153a77d03",
+    first_name: "ken",
+    second_name: "Hentakyu",
+    address: "23 Stritr",
+    city: "joijfoiejoi",
+    country: "jijfeoijeoi",
+    sexe: "joijfaoiejoi",
+    phone_number: "joijfeoiajoi",
+    mail: "joi",
+    created_at: "17/12/2023",
+    updated_at: "17/12/2023",
+    Id_user_create_at: 0
   },
   {
     ID: 2,
-    stt_tag: "",
+    stt_tag: "a58c2107-3c02-4c3d-8251-06508b1fd52d",
     first_name: "Naruto",
     second_name: "Uzumaki",
     address: "456 Elm Street",
@@ -110,7 +110,7 @@ export const client_db: Op_client[] = [
     mail: "jane.smith@example.com",
     created_at: "2021-02-01",
     updated_at: "2021-02-02",
-    Id_user_create_at: "def456",
+    Id_user_create_at: 0,
   },
 ];
 export default op_client_store;
